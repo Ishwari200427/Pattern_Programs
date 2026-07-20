@@ -1,11 +1,4 @@
-/*
-*****
-*****
-*****
-*****
-*****
-*/
-class Pattern1
+class Pattern2
 {
     public static void main(String args[])
     {
@@ -13,7 +6,7 @@ class Pattern1
     }
    public static void fun(int n)
    {
-       for(int i=0;i<n;i++)
+       for(int i=1;i<=n;i++)
        {
 	  for(int j=0;j<n;j++)
 	      System.out.print("*");
