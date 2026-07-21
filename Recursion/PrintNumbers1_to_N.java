@@ -2,16 +2,16 @@ class PrintNumbers1_to_N
 {
    public static void main(String args[])
    {
-       
-      print("Ishwari",0,5);
+      print(1,5);
    }
-public static void print(String name,int start, int n)
+public static void print(int cur,int n)
 {
-    if(start==n)
+    if(cur>n)
     {
-       return;
+        return ;
     }
-   System.out.println(name);
-   print(name,start+1,n);
+   System.out.println(cur);
+   print(cur+1,n);
+
 }
 }
