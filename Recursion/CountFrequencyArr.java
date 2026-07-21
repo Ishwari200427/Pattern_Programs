@@ -27,6 +27,8 @@ class CountFrequencyArr
                         count++;
 		   }
 		}
+	    HashMap<Integer,Integer>m=new HashMap<>();
+            for(Map.e)
 	    System.out.println(arr[i]+": "+count);
         }
    }
