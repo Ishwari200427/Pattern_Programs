@@ -2,8 +2,9 @@ class SecondLargest2
 {
     public static void main(String args[])
     {
-        int arr[]={23,41,24,42,18};
-        System.out.println("Second Largest Element in array:"+SecondMax(arr));
+        int arr[]={23,23,41,24,42,18};
+        System.out.println("Second Largest Element in array:"+SecondMax(arr)+SecondMin(arr));
+        System.out.println("Second Smallest Element in array "+SecondMin(arr));
     }
     public static int SecondMax(int arr[])
     {
@@ -23,5 +24,23 @@ class SecondLargest2
             }
           return second;  
     }
+  public static int SecondMin(int arr[])
+  {
+     int min=Integer.MAX_VALUE;
+     int secMin=Integer.MIN_VALUE;
+     for(int i=0;i<arr.length;i++)
+     {
+         if(arr[i]<min)
+         {
+            secMin=min;
+           min=arr[i];
+         }
+        else if(arr[i]<secMin && arr[i]!=min)
+        {
+          secMin=arr[i];
+        }
+     }
+   return secMin;
+  }
 
 }
