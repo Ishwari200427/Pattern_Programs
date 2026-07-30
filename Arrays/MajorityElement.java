@@ -3,7 +3,7 @@ class MajorityElement
 {
     public static void main(String args[])
     {
-         int arr[]={1,2,3,2,2,2,2};
+         int arr[]={1,2,3};
          System.out.println(findMajor3(arr));
     }
     public static int findMajor(int arr[])
@@ -46,6 +46,7 @@ class MajorityElement
     }
    public static int findMajor3(int arr[])
    {
+      int n=arr.length;
       int count=0;
       int ele=0;
       for(int i=0;i<arr.length;i++)
@@ -66,7 +67,19 @@ class MajorityElement
           }
         
       }
-return ele; 
+     int freq=0;
+     for(int num:arr)
+      {
+           if(num==ele)
+           {
+              freq++;
+           }
+      }
+    if(freq>n/2)
+    {
+        return ele;
+    }
+return -1;
    }
    
 }
